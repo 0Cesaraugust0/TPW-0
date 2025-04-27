@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Explora IA - Cursos</title>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      padding: 10px 0;
+    }
+    h1 {
+      font-size: 2.2em;
+      margin-bottom: 10px;
+    }
+    .description {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+    .link-section {
+      margin-top: 40px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .link-section h2 {
+      font-size: 1.5em;
+      margin-bottom: 15px;
+    }
+    .link-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    .link-list li {
+      background: #fff;
+      margin-bottom: 10px;
+      border-left: 5px solid #007bff;
+      padding: 10px 15px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+    .link-list a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .link-list a:hover {
+      text-decoration: underline;
+    }
+
+    .tool-card {
+      background: #fff;
+      border-left: 5px solid #007bff;
+      padding: 10px 15px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      max-width: 800px;
+      margin: 30px auto 10px;
+      cursor: pointer;
+      font-weight: bold;
+      text-align: center;
+    }
+    .tool-card:hover {
+      background-color: #f0f4ff;
+    }
+
+
+  
+  .tool-links {
+    display: none;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 20px;
+  }
+  .tool-links a {
+    display: block;
+    margin: 8px 0;
+    color: #007bff;
+    text-decoration: none;
+  }
+  .tool-links a:hover {
+    text-decoration: underline;
+  }
+  </style>
+
+</head>
+<body>
+  <header>
+    <h1>Explora IA – Subcategoría: Cursos</h1>
+  </header>
+
+  <div class="description">
+    <p>
+      En esta subcategoría, exploramos las instituciones
+    </p>
+    <p>
+      Algunos ejemplos de contenido que se pueden encontrar:
+      <ul>
+        <li>Locuciones generadas por expositores</li>
+        <li>Creación de estudios como carreras  </li>
+
+      </ul>
+    </p>
+  </div>
+
+  <div class="link-section">
+    <h2>Nuevos Entornos Educativos</h2>
+
+      <div class="tool-card" onclick="toggleTool('Certificaciones')">- Certificaciones -</div>
+      <div class="tool-links" id="Certificaciones">
+      <a href="https://www.formacionyestudios.com/que-es-google-academico-y-como-sacarle-el-maximo-partido.html" target="_blank">Aprendiendo con Google #1</a>
+      </div>
+   
+
+      <div class="tool-card" onclick="toggleTool('Blogs')">- Blogs -</div>
+      <div class="tool-links" id="Blogs">
+      <a href="https://onedrive.live.com/?cid=A2950A1FEBC69E43&id=A2950A1FEBC69E43%21sadaad7b882ba49f1831fc4e11522c4c6&parId=root&o=OneUp" target="_blank">Curso Github - Descarga</a>
+      <a href="https://www.w3schools.com" target="_blank">Desarrollo Web Essentials #1</a>
+      </div>
+  
+
+      <div class="tool-card" onclick="toggleTool('Universidades')">- Universidades -</div>
+      <div class="tool-links" id="Universidades">
+      <a href="https://portal.utp.edu.pe/servicios/refuerzo-academico?utm_campaign=Talleres+y+Tutorias&utm_medium=bitly&utm_source=Mail+UTP" target="_blank"> Inscripción de Talleres - Exclusivo UTP</a>
+    </div>
+    <script>  //Javascript
+      function toggleTool(id) {
+        const el = document.getElementById(id);
+        if (el) {
+          el.style.display = el.style.display === 'block' ? 'none' : 'block';
+        }
+      }
+    </script>
+    
+</body>
+</html>

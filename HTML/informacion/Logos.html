@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Explora IA - Fotografía</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      padding: 10px 0;
+    }
+    h1 {
+      font-size: 2.2em;
+      margin-bottom: 10px;
+    }
+    .description {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+
+    .tool-card {
+      background: #fff;
+      border-left: 5px solid #007bff;
+      padding: 10px 15px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      max-width: 800px;
+      margin: 30px auto 10px;
+      cursor: pointer;
+      font-weight: bold;
+      text-align: center;
+    }
+    .tool-card:hover {
+      background-color: #f0f4ff;
+    }
+    .tool-links {
+      display: none;
+      max-width: 800px;
+      margin: 0 auto;
+      padding-left: 20px;
+    }
+    .tool-links a {
+      display: block;
+      margin: 8px 0;
+      color: #007bff;
+      text-decoration: none;
+    }
+    .tool-links a:hover {
+      text-decoration: underline;
+    }
+
+
+   </style>
+</head>
+<body>
+  <header>
+    <h1>Explora IA – Subcategoría: Fotografía</h1>
+  </header>
+
+  <div class="description">
+    <p>
+      La inteligencia artificial está revolucionando el diseño con herramientas que mejoran imágenes automáticamente, generan composiciones visuales y hasta crean retratos sintéticos.
+    </p>
+    <p>
+      Algunos ejemplos de aplicación en fotografía:
+      <ul>
+        <li>Retoque automático de imágenes</li>
+        <li>Generación de fondos o escenarios de Logos</li>
+        <li>Mejoras de nitidez y color de Logos</li>
+      </ul>
+    </p>
+  </div>
+
+ 
+  <div class="description">
+    <p>Haz clic en la herramienta para ver todos los enlaces relacionados.</p>
+  </div>
+
+    <div class="tool-card" onclick="toggleTool()">Enlaces: Ganchos sobre Logos con IA</div>
+    <div class="tool-links" id="toolLinks">
+    <ul>
+        <li><a href="https://www.youtube.com/shorts/Fob-VuMdKHU" target="_blank">Logos #1</a></li>
+    </ul>
+    </div>
+    <script>  //Javascript
+        function toggleTool() {
+          const el = document.getElementById('toolLinks');
+          el.style.display = el.style.display === 'block' ? 'none' : 'block';
+        }
+      </script>
+</body>
+</html>
