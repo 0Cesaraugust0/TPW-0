@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Encuesta al Usuario</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #2c3e50;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      color: #867094;
+    }
+
+    form {
+      background: #fff;
+      padding: 25px;
+      border-radius: 8px;
+      max-width: 700px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .pregunta {
+      margin-bottom: 20px;
+    }
+
+    .pregunta label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .opciones {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .opciones label {
+      font-weight: normal;
+    }
+
+    button {
+      display: block;
+      margin: 30px auto 0;
+      padding: 10px 25px;
+      background: #6a1b9a;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background: #4a148c;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Encuesta al Usuario</h1>
+<form action="#" method="post">
+  <fieldset>
+    <legend><strong>Desempeño de las herramientas utilizadas</strong></legend>
+
+    <!-- Preguntas 1 a 5 -->
+    <div class="pregunta">
+      <label>1. Facilidad de uso</label>
+      <div class="opciones">
+        <label><input type="radio" name="p1" value="Excelente"> Excelente</label>
+        <label><input type="radio" name="p1" value="Bueno"> Bueno</label>
+        <label><input type="radio" name="p1" value="Regular"> Regular</label>
+        <label><input type="radio" name="p1" value="Malo"> Malo</label>
+      </div>
+    </div>
+
+    <div class="pregunta">
+      <label>2. Velocidad de respuesta</label>
+      <div class="opciones">
+        <label><input type="radio" name="p2" value="Excelente"> Excelente</label>
+        <label><input type="radio" name="p2" value="Bueno"> Bueno</label>
+        <label><input type="radio" name="p2" value="Regular"> Regular</label>
+        <label><input type="radio" name="p2" value="Malo"> Malo</label>
+      </div>
+    </div>
+
+    <div class="pregunta">
+      <label>3. Claridad de resultados</label>
+      <div class="opciones">
+        <label><input type="radio" name="p3" value="Excelente"> Excelente</label>
+        <label><input type="radio" name="p3" value="Bueno"> Bueno</label>
+        <label><input type="radio" name="p3" value="Regular"> Regular</label>
+        <label><input type="radio" name="p3" value="Malo"> Malo</label>
+      </div>
+    </div>
+
+    <div class="pregunta">
+      <label>4. Utilidad práctica</label>
+      <div class="opciones">
+        <label><input type="radio" name="p4" value="Excelente"> Excelente</label>
+        <label><input type="radio" name="p4" value="Bueno"> Bueno</label>
+        <label><input type="radio" name="p4" value="Regular"> Regular</label>
+        <label><input type="radio" name="p4" value="Malo"> Malo</label>
+      </div>
+    </div>
+
+    <div class="pregunta">
+      <label>5. Diseño y presentación</label>
+      <div class="opciones">
+        <label><input type="radio" name="p5" value="Excelente"> Excelente</label>
+        <label><input type="radio" name="p5" value="Bueno"> Bueno</label>
+        <label><input type="radio" name="p5" value="Regular"> Regular</label>
+        <label><input type="radio" name="p5" value="Malo"> Malo</label>
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend><strong>Evaluación del marco de logros</strong></legend>
+
+    <!-- Preguntas 6 a 10 -->
+    <div class="pregunta">
+      <label>6. ¿Se cumplieron los objetivos propuestos?</label>
+      <div class="opciones">
+        <label><input type="radio" name="p6" value="Excelente"> Excelente</label>
+        <label><input type="radio" name="p6" value="Bueno"> Bueno</label>
+        <label><input type="radio" name="p6" value="Regular"> Regular</label>
+        <label><input type="radio" name="p6" value="Malo"> Malo</label>
+      </div>
+    </div>
+
+    <div class="pregunta">
+      <label>7. Nivel de satisfacción general</label>
+      <div class="opciones">
+        <label><input type="radio" name="p7" value="Excelente"> Excelente</label>
+        <label><input type="radio" name="p7" value="Bueno"> Bueno</label>
+        <label><input type="radio" name="p7" value="Regular"> Regular</label>
+        <label><input type="radio" name="p7" value="Malo"> Malo</label>
+      </div>
+    </div>
+
+    <div class="pregunta">
+      <label>8. Alcance de metas personales</label>
+      <div class="opciones">
+        <label><input type="radio" name="p8" value="Excelente"> Excelente</label>
+        <label><input type="radio" name="p8" value="Bueno"> Bueno</label>
+        <label><input type="radio" name="p8" value="Regular"> Regular</label>
+        <label><input type="radio" name="p8" value="Malo"> Malo</label>
+      </div>
+    </div>
+
+    <div class="pregunta">
+      <label>9. Aplicabilidad en el entorno real</label>
+      <div class="opciones">
+        <label><input type="radio" name="p9" value="Excelente"> Excelente</label>
+        <label><input type="radio" name="p9" value="Bueno"> Bueno</label>
+        <label><input type="radio" name="p9" value="Regular"> Regular</label>
+        <label><input type="radio" name="p9" value="Malo"> Malo</label>
+      </div>
+    </div>
+
+    <div class="pregunta">
+      <label>10. Recomendación a otros usuarios</label>
+      <div class="opciones">
+        <label><input type="radio" name="p10" value="Excelente"> Excelente</label>
+        <label><input type="radio" name="p10" value="Bueno"> Bueno</label>
+        <label><input type="radio" name="p10" value="Regular"> Regular</label>
+        <label><input type="radio" name="p10" value="Malo"> Malo</label>
+      </div>
+    </div>
+  </fieldset>
+
+  <button type="submit">Enviar Respuestas</button>
+</form>
+
+</body>
+</html>
