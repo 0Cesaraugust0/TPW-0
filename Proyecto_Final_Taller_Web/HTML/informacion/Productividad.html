@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ 
+  <meta charset="UTF-8">
+  <title>Explora IA - Contenido</title>
+<style>
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+  }
+  header {
+    text-align: center;
+    padding: 10px 0;
+  }
+  h1 {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+  }
+  .description {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1em;
+    line-height: 1.6;
+  }
+  .tool-card {
+    background: #fff;
+    border-left: 5px solid #007bff;
+    padding: 10px 15px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    max-width: 800px;
+    margin: 30px auto 10px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+  }
+  .tool-card:hover {
+    background-color: #f0f4ff;
+  }
+  .tool-links {
+    display: none;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 20px;
+  }
+  .tool-links a {
+    display: block;
+    margin: 8px 0;
+    color: #007bff;
+    text-decoration: none;
+  }
+  .tool-links a:hover {
+    text-decoration: underline;
+  }
+
+</style>
+
+</head>
+<body>
+  <header>
+    <h1>Explora IA – Subcategoría: Productividad</h1>
+  </header>
+
+  <div class="description">
+    <p>Haz clic en la herramienta para ver todos los enlaces relacionados.</p>
+  </div>
+
+  <!-- Único botón -->
+  <div class="tool-card" onclick="toggleTool()">Video: Herramienta Productividad IA</div>
+  <div class="tool-links" id="toolLinks">
+    <a href="https://www.instagram.com/reel/DFygYxrSwT7/?igsh=dzVyc25vMGJ4aTA1" target="_blank">Contenido de Generación con IA</a>
+    <a href="https://www.instagram.com/reel/DIuX8aTMtLe/?igsh=MWd2enRyeGR5eXRscQ==" target="_blank">Productividad #2</a> 
+    <a href="https://www.instagram.com/reel/DGABzx1MzVN/?igsh=ODBxdmQ2YXdzcHNr" target="_blank">Productividad #3</a> 
+    <a href="https://www.instagram.com/reel/DDZPbiUu3qX/?igsh=b25keDB1OTdoZ2M=" target="_blank">Productividad #4</a> 
+    <a href="https://www.instagram.com/reel/DE24_LutzPS/?igsh=MTFzbnBvc3o4NWNzbQ==" target="_blank">Productividad #5</a>  
+    <a href="https://youtu.be/2UIfa5uUN1c?si=14BPk7D1CrGLtMAb" target="_blank">Productividad #6</a>   
+    <a href="https://youtube.com/shorts/iQydw-MgwNI?si=vmAXzzNkDneOFCRq" target="_blank">Productividad #7</a>   
+    <a href="https://youtube.com/shorts/MDxgog1-Dbc?si=APVs8hQbfGilOEnD" target="_blank">Productividad #8</a>   
+  </div>
+
+  <script>
+    function toggleTool() {
+      const el = document.getElementById('toolLinks');
+      el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>
