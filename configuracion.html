@@ -41,20 +41,29 @@
     </label>
   </div>
 
-  <button onclick="guardarConfiguracion()">Guardar Configuración</button>
+<button onclick="guardarYSalir()">Guardar Configuración y Salir</button>
 
-  <script>
-    // Cargar configuración previa
-    document.getElementById("responsiveToggle").checked = localStorage.getItem("modoResponsive") === "true";
-    document.getElementById("encuestaToggle").checked = localStorage.getItem("mostrarEncuesta") !== "false";
-    document.getElementById("temaToggle").checked = localStorage.getItem("temaOscuro") === "true";
 
-    function guardarConfiguracion() {
-      localStorage.setItem("modoResponsive", document.getElementById("responsiveToggle").checked);
-      localStorage.setItem("mostrarEncuesta", document.getElementById("encuestaToggle").checked);
-      localStorage.setItem("temaOscuro", document.getElementById("temaToggle").checked);
-      alert("Configuración guardada ✅");
-    }
-  </script>
+<script>
+  // Establecer estado inicial
+  document.getElementById("responsiveToggle").checked = localStorage.getItem("modoResponsive") === "true";
+  document.getElementById("encuestaToggle").checked = localStorage.getItem("mostrarEncuesta") !== "false";
+  document.getElementById("temaToggle").checked = localStorage.getItem("temaOscuro") === "true";
+
+  function guardarYSalir() {
+    const responsive = document.getElementById("responsiveToggle").checked;
+    const encuesta = document.getElementById("encuestaToggle").checked;
+    const oscuro = document.getElementById("temaToggle").checked;
+
+    localStorage.setItem("modoResponsive", responsive);
+    localStorage.setItem("mostrarEncuesta", encuesta);
+    localStorage.setItem("temaOscuro", oscuro);
+
+    alert("✅ Configuración guardada");
+    window.location.href = "index.html"; // Redirige automáticamente
+  }
+</script>
+
 </body>
+
 </html>
