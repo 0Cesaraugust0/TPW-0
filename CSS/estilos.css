@@ -193,3 +193,44 @@ body {
   font-size: 14px;
   color: #ffff;
 }
+
+
+
+/* Estilos específicos SOLO para tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .sidebar {
+    width: 220px;
+    padding: 1rem;
+  }
+
+  .main {
+    width: calc(100% - 220px);
+    padding: 1rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .card {
+    font-size: 0.95rem;
+  }
+
+  .sidebar .logo img {
+    width: 100px;
+  }
+
+  .search, select, .more-btn {
+    font-size: 0.9rem;
+  }
+
+  .bottom-links a {
+    font-size: 0.85rem;
+  }
+}
