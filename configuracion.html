@@ -3,67 +3,84 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Configuración del Administrador</title>
+  <title>Configuración (Admin)</title>
   <style>
     body {
-      font-family: sans-serif;
-      padding: 2rem;
+      margin: 0;
+      height: 100vh;
+      background-color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
     }
-    .switch {
-      margin-bottom: 20px;
+
+    .config-box {
+      background-color: white;
+      padding: 30px 40px;
+      border-radius: 4px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      min-width: 300px;
     }
+
+    h2 {
+      margin-top: 0;
+      font-size: 20px;
+    }
+
+    .checkbox-group {
+      margin: 15px 0;
+    }
+
     label {
-      font-weight: bold;
+      display: block;
+      margin-bottom: 8px;
+      font-weight: normal;
+    }
+
+    .config-box input[type="checkbox"] {
+      margin-right: 8px;
+    }
+
+    .config-box button {
+      margin-top: 10px;
+      padding: 8px 14px;
+      font-size: 14px;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <h2>Panel de Configuración (Admin)</h2>
 
-  <div class="switch">
-    <label>
-      <input type="checkbox" id="responsiveToggle" />
-      Responsive en Tablets
-    </label>
+  <div class="config-box">
+    <h2>Panel de Configuración (Admin)</h2>
+
+    <div class="checkbox-group">
+      <label><input type="checkbox" id="chkResponsive"> Desactivar Responsive en Tablets</label>
+      <label><input type="checkbox" id="chkEncuesta"> Mostrar Encuesta</label>
+      <label><input type="checkbox" id="chkOscuro"> Tema Oscuro</label>
+    </div>
+
+    <button onclick="guardarConfiguracion()">Guardar Configuración y Salir</button>
   </div>
 
-  <div class="switch">
-    <label>
-      <input type="checkbox" id="encuestaToggle" />
-      Mostrar Encuesta
-    </label>
-  </div>
+  <script>
+    // Cargar configuración guardada al iniciar
+    window.onload = function () {
+      document.getElementById('chkResponsive').checked = localStorage.getItem("modoResponsive") !== "false";
+      document.getElementById('chkEncuesta').checked = localStorage.getItem("mostrarEncuesta") !== "false";
+      document.getElementById('chkOscuro').checked = localStorage.getItem("temaOscuro") === "true";
+    };
 
-  <div class="switch">
-    <label>
-      <input type="checkbox" id="temaToggle" />
-      Tema Oscuro
-    </label>
-  </div>
+    function guardarConfiguracion() {
+      localStorage.setItem("modoResponsive", document.getElementById('chkResponsive').checked);
+      localStorage.setItem("mostrarEncuesta", document.getElementById('chkEncuesta').checked);
+      localStorage.setItem("temaOscuro", document.getElementById('chkOscuro').checked);
 
-<button onclick="guardarYSalir()">Guardar Configuración y Salir</button>
-
-
-<script>
-  // Establecer estado inicial
-  document.getElementById("responsiveToggle").checked = localStorage.getItem("modoResponsive") === "true";
-  document.getElementById("encuestaToggle").checked = localStorage.getItem("mostrarEncuesta") !== "false";
-  document.getElementById("temaToggle").checked = localStorage.getItem("temaOscuro") === "true";
-
-  function guardarYSalir() {
-    const responsive = document.getElementById("responsiveToggle").checked;
-    const encuesta = document.getElementById("encuestaToggle").checked;
-    const oscuro = document.getElementById("temaToggle").checked;
-
-    localStorage.setItem("modoResponsive", responsive);
-    localStorage.setItem("mostrarEncuesta", encuesta);
-    localStorage.setItem("temaOscuro", oscuro);
-
-    alert("✅ Configuración guardada");
-    window.location.href = "index.html"; // Redirige automáticamente
-  }
-</script>
+      alert("Configuración guardada.");
+      window.location.href = "index.html"; // Redirección
+    }
+  </script>
 
 </body>
-
 </html>
