@@ -6,6 +6,33 @@
   <title>Login o Registro</title>
   <link rel="stylesheet" href="CSS/estilologin.css" />
 </head>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Aplicar tema oscuro
+    if (localStorage.getItem("temaOscuro") === "true") {
+      document.body.style.backgroundColor = "#111";
+      document.body.style.color = "#f0f0f0";
+    }
+
+    // Ocultar encuesta
+    if (localStorage.getItem("mostrarEncuesta") === "false") {
+      const encuesta = document.querySelector('.encuesta-box');
+      if (encuesta) encuesta.style.display = "none";
+    }
+
+    // Desactivar responsive tablet
+    const disableResponsive = localStorage.getItem("modoResponsive") === "false";
+    if (disableResponsive) {
+      const metaViewport = document.querySelector('meta[name=viewport]');
+      if (metaViewport) metaViewport.setAttribute('content', 'width=1024'); // Forzar ancho fijo
+    }
+  });
+</script>
+
+
+
+
 <body>
 
   <div class="container">
@@ -13,7 +40,7 @@
     <!-- Botones para cambiar entre formularios -->
     <div class="opciones">
       <button class="opcion" onclick="mostrarFormulario('login')">Iniciar Sesión</button>
-      <button class="opcion" onclick="mostrarFormulario('registro')">Registrarse</button>
+  <!--  <button class="opcion" onclick="mostrarFormulario('registro')">Registrarse</button>--
     </div>
 
     <!-- Formulario de Inicio de Sesión -->
@@ -60,11 +87,12 @@
     </form>
   </div>
   <script>
-    function iniciarSesion(event) {
-      event.preventDefault(); // Evita el envío real del formulario
-      localStorage.setItem("usuarioLogueado", "true"); // Guarda el estado de sesión
-      window.location.href = "index.html"; // Redirige a la pantalla principal
-    }
+function iniciarSesion(event) {
+  event.preventDefault();
+  localStorage.setItem("usuarioLogueado", "true");
+  window.location.href = "configuracion.html"; // 🔁 Redirección al nuevo index secundario
+}
+
   </script>
 
   <!-- Script para mostrar formularios -->
