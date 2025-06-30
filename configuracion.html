@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Configuración del Administrador</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+    }
+    .switch {
+      margin-bottom: 20px;
+    }
+    label {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>Panel de Configuración (Admin)</h2>
+
+  <div class="switch">
+    <label>
+      <input type="checkbox" id="responsiveToggle" />
+      Responsive en Tablets
+    </label>
+  </div>
+
+  <div class="switch">
+    <label>
+      <input type="checkbox" id="encuestaToggle" />
+      Mostrar Encuesta
+    </label>
+  </div>
+
+  <div class="switch">
+    <label>
+      <input type="checkbox" id="temaToggle" />
+      Tema Oscuro
+    </label>
+  </div>
+
+<button onclick="guardarYSalir()">Guardar Configuración y Salir</button>
+
+
+<script>
+  // Establecer estado inicial
+  document.getElementById("responsiveToggle").checked = localStorage.getItem("modoResponsive") === "true";
+  document.getElementById("encuestaToggle").checked = localStorage.getItem("mostrarEncuesta") !== "false";
+  document.getElementById("temaToggle").checked = localStorage.getItem("temaOscuro") === "true";
+
+  function guardarYSalir() {
+    const responsive = document.getElementById("responsiveToggle").checked;
+    const encuesta = document.getElementById("encuestaToggle").checked;
+    const oscuro = document.getElementById("temaToggle").checked;
+
+    localStorage.setItem("modoResponsive", responsive);
+    localStorage.setItem("mostrarEncuesta", encuesta);
+    localStorage.setItem("temaOscuro", oscuro);
+
+    alert("✅ Configuración guardada");
+    window.location.href = "index.html"; // Redirige automáticamente
+  }
+</script>
+
+</body>
+
+</html>
