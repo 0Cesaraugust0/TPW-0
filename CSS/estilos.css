@@ -82,9 +82,11 @@ body,
 
 /* ============== ESTRUCTURA PRINCIPAL ============== */
 .container {
-  display: flex;
-  height: 100vh;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
 }
+
 
 /* Sidebar */
 .sidebar {
