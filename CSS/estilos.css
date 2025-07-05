@@ -14,9 +14,10 @@ body,
 }
 
 .tema-claro .sidebar {
-  background-color: #ffe1eb;
-  border-right: 2px solid #f3bdd4;
+  background-color: #000; /* Negro fijo */
+  border-right: none;     /* Quita borde rosado */
 }
+
 
 .tema-claro .card {
   background-color: #fff9fc;
